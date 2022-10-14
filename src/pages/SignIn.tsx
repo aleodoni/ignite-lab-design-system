@@ -33,7 +33,7 @@ export function SignIn() {
         </Heading>
 
         <Text size="lg" className="text-gray-400 mt-1">
-          Faça login e começe a usar
+          Log in and start using
         </Text>
       </header>
 
@@ -41,20 +41,20 @@ export function SignIn() {
         onSubmit={handleSignIn}
         className="flex flex-col items-stretch w-full max-w-sm mt-10 gap-4"
       >
-        {isUserSignedIn && <Text>Login realizado!</Text>}
+        {isUserSignedIn && <Text>Successfully logged in!</Text>}
         <label htmlFor="email" className="flex flex-col gap-3">
-          <Text className="font-semibold">Endereço de e-mail</Text>
+          <Text className="font-semibold">e-mail address</Text>
           <TextInput.Root>
             <TextInput.Icon>
               <Envelope />
             </TextInput.Icon>
 
-            <TextInput.Input type="email" placeholder="Digite o seu e-mail" />
+            <TextInput.Input type="email" placeholder="Your e-mail" />
           </TextInput.Root>
         </label>
 
         <label htmlFor="password" className="flex flex-col gap-3">
-          <Text className="font-semibold">Sua senha</Text>
+          <Text className="font-semibold">Your password</Text>
           <TextInput.Root>
             <TextInput.Icon>
               <Lock />
@@ -67,24 +67,24 @@ export function SignIn() {
         <label htmlFor="remember" className="flex items-center gap-2">
           <Checkbox id="remember" />
           <Text size="sm" className="text-gray-200">
-            Lembrar de mim por 30 dias
+            Remember me for 30 days
           </Text>
         </label>
 
         <Button type="submit" className="mt-4">
-          Entrar na plataforma
+          Log in
         </Button>
       </form>
 
       <footer className="flex flex-col items-center gap-4 mt-8">
         <Text asChild size="sm">
           <a href="" className="text-gray-400 underline hover:text-gray-200">
-            Esqueceu a sua senha?
+            Forgot your password?
           </a>
         </Text>
         <Text asChild size="sm">
           <a href="" className="text-gray-400 underline hover:text-gray-200">
-            Não possui conta? Crie uma agora!
+            Don't own an account? Create now!
           </a>
         </Text>
       </footer>
