@@ -16,7 +16,7 @@ export default {
         rest.post('/sessions', (req, res, ctx) => {
           return res(
             ctx.json({
-              message: 'Login realizado!',
+              message: 'Successfully logged in!',
             }),
           );
         }),
@@ -30,7 +30,7 @@ export const Default: StoryObj = {
     const canvas = within(canvasElement);
 
     userEvent.type(
-      canvas.getByPlaceholderText('Digite o seu e-mail'),
+      canvas.getByPlaceholderText('Your e-mail'),
       'aleodoni@gmail.com',
     );
     userEvent.type(canvas.getByPlaceholderText('********'), '123456');
@@ -38,7 +38,9 @@ export const Default: StoryObj = {
     userEvent.click(canvas.getByRole('button'));
 
     await waitFor(() => {
-      return expect(canvas.getByText('Login realizado!')).toBeInTheDocument();
+      return expect(
+        canvas.getByText('Successfully logged in!'),
+      ).toBeInTheDocument();
     });
   },
 };
